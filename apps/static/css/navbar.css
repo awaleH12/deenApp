@@ -1,0 +1,337 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --navbar-bg-color: hsl(216, 45%, 98%);
+  --black-color: hsl(220, 24%, 12%);
+  --primary-color: #3e0e27;
+  --secondar-color: rgba(55, 231, 255, 0.4);
+  --header-bg:#F7F9FC;
+  --tertiary-color: #3B657D;
+  --body-font:#31282D;
+  --font-color: #31282D;
+  --bottom-border-color:#e9e6e6;
+  --black-color-light: hsl(220, 24%, 15%);
+  --black-color-lighten: hsl(220, 20%, 18%);
+  --white-color: #fff;
+  --body-color: #FDF4F4;
+  --menu-font-family: "Literata", serif;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --normal-font-size: .938rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+
+
+ul {
+  list-style: none;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/*=============== HEADER ===============*/
+.logo_text{
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  font-style: normal;
+  color: var(--primary-color);
+
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--navbar-bg-color);
+  border-bottom: 1px solid var(--bottom-border-color);
+  box-shadow: 0 1px 1px var(--bottom-border-color);
+  z-index: var(--z-fixed);
+}
+
+/*=============== NAV ===============*/
+.nav{
+  height: var(--header-height);
+  
+}
+
+.nav__burger,
+.nav__logo,
+.nav__close{
+  color: var(--primary-color);
+}
+.nav__data{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__logo{
+  display: inline-flex;
+  align-items: center;
+  
+  
+}
+
+.nav__toggle{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  
+}
+.nav__burger,
+.nav__close{
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  inset: 0;
+  margin: auto;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: opacity .1s, transform .4s;
+}
+
+.nav__close{
+  opacity: 0;
+}
+/* Navigation for mobile devices */
+@media screen and (max-width:1118px) {
+  .nav__menu{
+    position: absolute;
+    left: 0;
+    top:2.5rem;
+    width:100%;
+    
+    height: calc(100vh - 3.5rem);
+    overflow: auto;
+    pointer-events: none;
+    opacity: 0;
+    transition: top .4s opacity .3s;
+  }
+  .nav__menu::-webkit-scrollbar{
+    width: 0;
+  }
+  .nav__list{
+    background-color: var(--primary-color);
+    /* padding-top: 1rem; */
+  }
+  .nav__toggle i{
+    margin-right: 1rem;
+  }
+  .nav__data a{
+    margin-left: 1rem;
+  }
+  .nav__link {
+    position: relative; /* Required for positioning the ::after element */
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    font-family: var(--menu-font-family);
+    font-weight: var(--font-regular);
+    font-size: 21px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .3s;
+  }
+  .login_btn{
+    position: relative; /* Required for positioning the ::after element */
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    font-family: var(--menu-font-family);
+    font-weight: var(--font-regular);
+    font-size: 21px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .3s;
+  }
+
+  
+}
+
+
+
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Initially hidden */
+  height: 2px; /* Line height */
+  background-color: var(--bottom-border-color); /* Line color */
+  transition: width 0.45s ease; /* Smooth transition for the line */
+}
+.login_btn::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Initially hidden */
+  height: 2px; /* Line height */
+  background-color: var(--bottom-border-color); /* Line color */
+  transition: width 0.45s ease; /* Smooth transition for the line */
+}
+
+.nav__link:hover::after {
+  width: 100%; /* Expands the line on hover */
+}
+.login_btn:hover::after{
+  width: 100%; /* Expands the line on hover */
+}
+.login_btn:hover{
+  background-color: var(--black-color-light);
+}
+
+.nav__link:hover {
+  background-color: var(--black-color-light);
+}
+
+
+/* Show menu */
+.show-menu{
+  opacity: 1;
+  top: 3.5rem;
+  pointer-events: initial;
+}
+
+
+/* Show icon */
+.show-icon .nav__burger {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+.show-icon .nav__close {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+/* For large devices */
+@media screen and (min-width: 1118px) {
+  .container{
+    margin-inline: auto;
+  }
+  /* Nav */
+  .nav{
+    height:var(--header-height);
+   
+    margin: 1.5rem 0 1rem;
+  
+   
+  }
+  .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row;
+    width: 100%;
+  }
+  .nav__toggle {
+    display: none;
+  }
+ 
+  .nav__list{
+    height: 100%;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+
+    
+    
+  }
+  .nav__list a{
+    
+    margin-inline: 1rem;
+
+  }
+  .nav__link {
+    position: relative; 
+    
+    color: var(--primary-color);
+   
+    font-family: var(--menu-font-family);
+    font-weight: var(--font-regular);
+    font-size: 21px;
+    padding: 1.5rem 1.5rem;
+    
+    transition: background-color .3s;
+  }
+  .nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Initially hidden */
+    height: 2px; /* Line height */
+    background-color: var(--primary-color); /* Line color */
+    transition: width 0.45s ease; /* Smooth transition for the line */
+  }
+
+  .nav__link {
+ 
+    padding: 0.25rem;
+   
+
+  }
+  .login_btn{
+    background-color: var(--tertiary-color);
+    color: var(--body-color);
+    padding:0.5rem 2rem 0.75rem 2rem;
+ 
+    font-family: var(--menu-font-family);
+    font-weight: var(--font-regular);
+    font-size: 21px;
+
+   
+    border-radius: 47px;
+   
+  }
+
+  .login_btn:hover{
+    background-color: var(--primary-color);
+    color: var(--body-color);
+  }
+  .nav__link:hover {
+    background-color: transparent;
+  }
+  /* Dropdown */
+
+
+  
+}
+@media screen and (min-width: 1152px) {
+  .container {
+    margin-inline: auto;
+  }
+}

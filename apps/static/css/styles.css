@@ -15,3 +15,17 @@
 body{
   background-color: var(--ancent-color);
 }
+
+.literata-heading {
+  font-family: "Literata", serif;
+  font-optical-sizing: auto;
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+.literata-body {
+  font-family: "Literata", serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
