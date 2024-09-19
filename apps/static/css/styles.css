@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
 *{
   padding: 0;
   margin: 0;
@@ -14,6 +15,7 @@
 }
 body{
   background-color: var(--ancent-color);
+  height: 100dvh;
 }
 
 .literata-heading {
@@ -29,3 +31,38 @@ body{
   font-weight: 400; /* Regular */
   font-style: normal;
 }
+.section1 {
+  margin-top: 11rem;
+  margin-bottom: 3rem;
+}
+.section {
+  margin-top: 11rem;
+  margin-bottom: 3rem;
+}
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  padding: 1rem 1rem;
+  
+}
+.hero h1{
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  font-style: normal;
+  color: var(--primary-color);
+}
+.hero p{
+  font-family: "Literata", serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Bold */
+  font-style: normal;
+  font-size: 21px;
+  text-align: center;
+}
+@media screen and (max-width:1118px) {
+  
+}
+

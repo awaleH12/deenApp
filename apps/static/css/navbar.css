@@ -68,6 +68,7 @@ a {
   border-bottom: 1px solid var(--bottom-border-color);
   box-shadow: 0 1px 1px var(--bottom-border-color);
   z-index: var(--z-fixed);
+  
 }
 
 /*=============== NAV ===============*/
@@ -108,9 +109,10 @@ a {
   height: max-content;
   inset: 0;
   margin: auto;
-  font-size: 1.25rem;
+  font-size: 2rem;
   cursor: pointer;
   transition: opacity .1s, transform .4s;
+  
 }
 
 .nav__close{
