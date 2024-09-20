@@ -7,11 +7,15 @@
 :root{
   --body-bg-color: #FDF4F4;
   --primary-color: #3E0E27;
-
+  --bg-white:#fff;
+  --placeholder-text:#ffffff;
+  --body-text-primary:#31282D;
   --secondary-color: #3B657D;
   --tertiary-color: #37E7FF;
+  --hero-border-color:#15B9ED;
   --ancent-color: #FDF4F4;
   --font-size: 16px;
+  --box-shadow: 0 4px 4px hls(0,0,0, 25%);
 }
 body{
   background-color: var(--ancent-color);
@@ -36,7 +40,7 @@ body{
   margin-bottom: 3rem;
 }
 .section {
-  margin-top: 11rem;
+  margin-top: 5rem;
   margin-bottom: 3rem;
 }
 .hero{
@@ -45,6 +49,9 @@ body{
   align-items: center;
   flex-flow: column;
   padding: 1rem 1rem;
+  max-width: 1043px;
+  width: 100%;
+
   
 }
 .hero h1{
@@ -62,6 +69,94 @@ body{
   font-size: 21px;
   text-align: center;
 }
+.sub_hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--bg-white);
+  box-shadow: 0 4px 4px hsla(0, 0%, 0%, 0.252);
+
+}
+.inner_sub_hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  
+  padding: 2rem 1rem;
+  border: 2px dashed var(--hero-border-color);
+  
+}
+
+.create_acc_btn{
+  background-color: var(--primary-color);
+  color: var(--body-bg-color);
+  font-family: "Literata", serif;
+  font-size: 21px;
+  font-weight: 600; /* Bold */
+  font-style: normal;
+  padding: 8px 32px;
+  border-radius: 42px;
+ 
+}
+.create_acc_btn:hover{
+  background-color: var(--secondary-color);
+  color: var(--body-bg-color);
+  
+}
+/* search area */
+.search_main_cont{
+  max-width: 920px;
+  
+
+
+}
+.form_input{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row;
+  width: 100%;
+  
+
+}
+
+.search_btn{
+  background-color: var(--primary-color);
+  color: var(--body-bg-color);
+  font-family: "Literata", serif;
+  font-size: 24px;
+  font-weight: 600; /* semiBold */
+  font-style: normal;
+  /* padding: 1rem 32px; */
+  border-radius: 0 8px 8px 0;
+  flex: 1; /* 2 parts for the search input */
+  padding: 1rem 2rem; /* Optional padding for better appearance */
+ 
+  box-shadow: 0 4px 4px hsla(0, 0%, 0%, 0.252);
+
+}
+.search_btn:hover{
+  background-color: var(--secondary-color);
+  color: var(--body-bg-color);
+}
+.search_input{
+  background-color: var(--bg-white);
+  
+  color: var(--body-text-primary);
+  font-family: "Literata", serif;
+  font-size: 21px;
+  font-weight: 400; /* regular */
+  font-style: normal;
+ 
+  border-radius: 8px 0 0 8px;
+  border: none;
+  flex: 3; /* 1 part for the button */
+  padding: 18px 2rem; /* Optional padding for better appearance */
+  box-shadow: 0 4px 4px hsla(0, 0%, 0%, 0.252);
+}
+
 @media screen and (max-width:1118px) {
   
 }

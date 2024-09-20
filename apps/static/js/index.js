@@ -25,3 +25,5 @@ const showMenu = (toggleId, navId) => {
 };
 
 showMenu('nav-toggle', 'nav-menu');
+
+document.getElementById('search_field').removeAttribute('autofocus');
